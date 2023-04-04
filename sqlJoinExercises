@@ -1,0 +1,11 @@
+https://www.w3resource.com/sql-exercises/sql-joins-exercise-5.php
+From the following tables write a SQL query to locate those salespeople who do not live in the same city where their customers live and have received
+a commission of more than 12% from the company. Return Customer Name, customer city, Salesman, salesman city, commission.
+
+Select customer.name, customer.city,
+salesman.name,salesman.city,salesman.comission
+FROM salesman
+JOIN customer
+ON customer.salesman_id = salesman.salesman_id
+WHERE salesman.city <> customer.city 
+AND salesman comission>.12
